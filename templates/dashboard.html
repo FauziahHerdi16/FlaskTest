@@ -1,0 +1,43 @@
+{% extends 'template.html' %}
+{% block body %}
+<h1 class="mt-4">Dashboard</h1>
+<div class="row">
+    <div class="col-6">
+        <form>
+            <div class="mb-3">
+              <label for="population" class="form-label">Number Population</label>
+              <input type="number" class="form-control" id="population">
+            </div>
+            <div class="mb-3">
+              <label for="iteration" class="form-label">Iteration</label>
+              <input type="number" class="form-control" id="iteration">
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="selectalgo" id="bat" value="bat">
+                <label class="form-check-label" for="bat">BAT Algorithm</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="selectalgo" id="woa" value="woa">
+                <label class="form-check-label" for="woa">WOA</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="selectalgo" id="hybrid" value="hybrid">
+                <label class="form-check-label" for="hybrid">Hybrid BA-WOA</label>
+            </div><br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header text-center">
+              Result
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">A : </li>
+              <li class="list-group-item">B : </li>
+              <li class="list-group-item">MMRE Effort : </li>
+            </ul>
+          </div>
+    </div>
+</div>
+{% endblock %}
